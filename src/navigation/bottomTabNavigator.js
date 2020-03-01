@@ -15,7 +15,12 @@
  //Styles
  import {colors} from '../styles'
  //Screens
- import {Home} from '../screens'
+ import {
+    Home,
+    Music,
+    Search,
+    Favorite,
+    Profile}from '../screens'
  
  const Tab = createBottomTabNavigator();
  
@@ -43,7 +48,7 @@
         />
         <Tab.Screen
         name="Music"
-        component={Home}
+        component={Music}
         options={{
             tabBarLabel: 'Music',
             tabBarIcon: ({ color, size }) => (
@@ -52,18 +57,18 @@
         }}
         />
          <Tab.Screen
-        name="Find"
-        component={Home}
+        name="Search"
+        component={Search}
         options={{
-            tabBarLabel: 'Find',
+            tabBarLabel: 'Search',
             tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="search" color={color} size={size} />
             ),
         }}
         />
         <Tab.Screen
-        name="Favoritos"
-        component={Home}
+        name="Favorite"
+        component={Favorite}
         options={{
             tabBarLabel: 'Favorite',
             tabBarIcon: ({ color, size }) => (
@@ -72,8 +77,8 @@
         }}
         />
         <Tab.Screen
-        name="Perfil"
-        component={Home}
+        name="Profile"
+        component={Profile}
         options={{
             tabBarLabel: 'Profile',          
             tabBarIcon: ({ color, size }) => (

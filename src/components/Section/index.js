@@ -1,3 +1,4 @@
-import section from './section'
+import Section from './section'
 
-export default section
+
+export default Section

@@ -1,5 +1,5 @@
 /* 
-  * Name: {Home}
+  * Name: {Search}
   * Author: {Jhon Lucas}
   * Creation Date: (01/03/2019)
   * Version: {1.0.0}
@@ -10,7 +10,8 @@ import React from 'react'
 import {View,Text} from 'react-native'
 import Styles from './styles'
 
-class Home extends React.Component {
+
+class Search extends React.Component {
     constructor() {
       super();
       this.state = {}
@@ -19,10 +20,10 @@ class Home extends React.Component {
     render() {
       return (
         <View style={Styles.container}>
-          <Text style={{color:'white'}}>the Home screen is still being built</Text>
+            <Text style={{color:'white'}}>the Search screen is still being built</Text>
         </View>
       )
     }
   }
   
-  export default Home;
+  export default Search;

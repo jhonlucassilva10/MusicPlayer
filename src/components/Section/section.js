@@ -1,16 +1,15 @@
 
 import React from 'react'
-import {Text,View} from 'react-native';
+import {View} from 'react-native';
 import Styles from './styles'
+import Title from '../Title'
 
-function Section({ title }) {
+function Section(props) {
     return (
-      <View style={Styles.container}>          
-        <Text style={Styles.title}>
-            {title}
-        </Text>   
+      <View style={Styles.container}> 
+        <Title title={props.title}/>
+        {props.children}
       </View>
-      
     );
   }
 

@@ -1,20 +1,30 @@
 
-import {fonts} from '../../styles'
-import {percentWidthDpi,marginLeft} from '../../styles/metrics'
+import {percentWidthDpi,marginLeft,pxSize, dpiFont} from '../../styles/metrics'
 
 const styles = {
     container: {
         width:percentWidthDpi(100),
-        height:percentWidthDpi(9),
-        alignItems:'flex-start',
-        justifyContent:'center',
+        flex:1,
         paddingLeft:marginLeft,
-        marginBottom:percentWidthDpi(2),
+        backgroundColor:'grey'
     },
-    title:{
-       fontSize:fonts.h1,
-       color:'white'
+ 
+    //ItemSection
+    leftContainer:{
+        width:'20%',
+        height:'100%',
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:'pink'
     },
+    rightContainer:{
+        width:'80%',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between',
+        backgroundColor:'orange'
+
+    },    
 }
 
 export default styles

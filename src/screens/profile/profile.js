@@ -1,5 +1,5 @@
 /* 
-  * Name: {Home}
+  * Name: {Profile}
   * Author: {Jhon Lucas}
   * Creation Date: (01/03/2019)
   * Version: {1.0.0}
@@ -9,8 +9,13 @@
 import React from 'react'
 import {View,Text} from 'react-native'
 import Styles from './styles'
+import {
+    HeaderSimple,
+    ProfileItemSection,
+    Section
+} from '../../components';
 
-class Home extends React.Component {
+class Profile extends React.Component {
     constructor() {
       super();
       this.state = {}
@@ -19,10 +24,14 @@ class Home extends React.Component {
     render() {
       return (
         <View style={Styles.container}>
-          <Text style={{color:'white'}}>the Home screen is still being built</Text>
+          <HeaderSimple title="Account settings"/>
+          <ProfileItemSection/>
+          <Section>
+            <Text color='red'>TESTE</Text>
+          </Section>
         </View>
       )
     }
   }
   
-  export default Home;
+  export default Profile;

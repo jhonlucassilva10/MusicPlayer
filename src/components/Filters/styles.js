@@ -24,7 +24,7 @@ const styles = {
         alignItems:'center',
     },
     itemTitle: {
-        fontSize:fonts.h3,
+        fontSize:fonts.h4,
         color:'white',
         paddingLeft:percentWidthDpi(4),
         paddingRight:percentWidthDpi(4),

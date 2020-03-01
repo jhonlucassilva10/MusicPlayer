@@ -1,16 +1,23 @@
 
-import {fonts,colors} from '../../styles'
+import {fonts} from '../../styles'
 import {percentWidthDpi,pxSize,marginLeft} from '../../styles/metrics'
 
 
 const styles = {
-    //List
-    listContainer:{
+
+    container:{
         width:'100%',
         marginTop:percentWidthDpi(6),
+        paddingBottom:percentWidthDpi(35),
         paddingLeft:marginLeft,
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+    },
+    //List
+    contentContainerStyle:{
+        flexDirection:"row",
+         flexWrap:"wrap",
+         paddingTop:percentWidthDpi(1.5)
     },
 
     //Item
@@ -23,7 +30,7 @@ const styles = {
         alignItems:'center',
     },
     itemTitle: {
-        fontSize:fonts.h3,
+        fontSize:fonts.h4,
         color:'white',
         textAlign:'left',
         marginTop:'3.5%'
@@ -34,6 +41,11 @@ const styles = {
         height:'100%',
         width:'100%',
     },
+    image:{
+        width:'100%',
+        height:'100%',
+        borderRadius:pxSize(8)
+    }
 }
 
 export default styles
