@@ -3,7 +3,6 @@ import React from 'react'
 import {Text,View,TouchableOpacity} from 'react-native';
 import Styles from './styles'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ToggleSwitch from '../ToggleSwitch/toggleSwitch'
 
 function ItemSection(props) {
     return (
