@@ -33,14 +33,14 @@ class Profile extends React.Component {
               <ItemSection margin title={'Offline Mode'} description={'Only downloaded content will be available'}/>
               <Divider/>
               <Section title={'Playback'}>
-                <ItemSection title={'Crossfade'} description={''}/>
+                <ItemSection title={'Crossfade'}/>
                 <ItemSection title={'Lourdness normalization'} />
                 <ItemSection title={'Autoplay'} description={'Play no-stop music.When you are finished with your last track, we will start a track radio based on the last track you played'}/>
               </Section>
               <Divider/>
               <Section title={'Quality'}>
-                <ItemSection title={'Streaming'} description={''}/>
-                <ItemSection title={'Streaming'} description={''}/>
+                <ItemSection title={'Streaming'} />
+                <ItemSection title={'Streaming'} />
               </Section>
             </View>
           </ScrollView>

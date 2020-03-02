@@ -9,7 +9,7 @@
 
  import * as React from 'react';
  import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
- //Fonts
+ //Icon Fonts
  import FontAwesome from "react-native-vector-icons/MaterialCommunityIcons";
  import MaterialIcons from "react-native-vector-icons/MaterialIcons";
  //Styles
