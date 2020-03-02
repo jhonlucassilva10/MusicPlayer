@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { SearchBar } from 'react-native-elements';
+import { View } from 'react-native';
 import Styles from './styles'
 
 
@@ -17,15 +18,17 @@ class SearchBarCompment extends React.Component {
     const { search } = this.state;
 
     return (
-      <SearchBar
-        placeholder={this.props.placeholder}
-        onChangeText={this.updateSearch}
-        value={search}
-        containerStyle={Styles.containerStyle}
-        inputContainerStyle={Styles.inputContainerStyle}  
-        searchIcon={Styles.searchIcon}
-        inputStyle={Styles.inputStyle}
-      />
+      <View style={Styles.container}>
+        <SearchBar
+          placeholder={this.props.placeholder}
+          onChangeText={this.updateSearch}
+          value={search}
+          containerStyle={Styles.searchcontainerStyle}
+          inputContainerStyle={Styles.inputContainerStyle}  
+          searchIcon={Styles.searchIcon}
+          inputStyle={Styles.inputStyle}
+        />
+      </View>
     );
   }
 }

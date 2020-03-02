@@ -1,6 +1,6 @@
 
 import {fonts} from '../../styles'
-import {percentWidthDpi,marginLeft} from '../../styles/metrics'
+import {percentWidthDpi,margin} from '../../styles/metrics'
 
 const styles = {
     container: {
@@ -8,12 +8,13 @@ const styles = {
         height:percentWidthDpi(9),
         alignItems:'flex-start',
         justifyContent:'center',
-        paddingLeft:marginLeft,
+        marginBottom:percentWidthDpi(0.5)
     },
     title:{
-       fontSize:fonts.h3,
+       fontSize:fonts.h2,
        color:'white'
     },
+    margin:margin
 }
 
 export default styles

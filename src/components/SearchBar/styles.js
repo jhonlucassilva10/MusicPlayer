@@ -1,21 +1,24 @@
 
-import {colors,fonts} from '../../styles'
-import {percentWidthDpi,pxSize} from '../../styles/metrics'
+import {fonts} from '../../styles'
+import {percentWidthDpi,pxSize,margin} from '../../styles/metrics'
 
 const styles = {
-    containerStyle: {
-        width:'85%',
+    container:{
+        width:'100%',
         height:percentWidthDpi(9),
-        backgroundColor:colors.background,
-        alignSelf:'center',
+        paddingLeft:margin,
+        paddingRight:margin,
+    },
+    searchcontainerStyle: {
+        width:'100%',
+        height:'100%',
         borderRadius:pxSize(9),
-        padding:0,
+        padding:0,    
     },
     inputContainerStyle:{
         backgroundColor:'#42454A',
         borderRadius:12,
         height:'100%',
-        paddingLeft:'3%'
     },
     inputStyle:{
         fontSize:fonts.input

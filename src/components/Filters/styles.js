@@ -1,6 +1,6 @@
 
 import {fonts,colors} from '../../styles'
-import {percentWidthDpi,pxSize,marginLeft} from '../../styles/metrics'
+import {percentWidthDpi,pxSize,margin} from '../../styles/metrics'
 
 
 const styles = {
@@ -10,7 +10,7 @@ const styles = {
         marginTop:percentWidthDpi(6),
     },
     ItemSeparatorComponent:{
-        width:marginLeft,
+        marginLeft:margin*0.6,
         height:'100%'
     },
 

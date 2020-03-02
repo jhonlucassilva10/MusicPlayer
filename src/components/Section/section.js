@@ -6,8 +6,8 @@ import Title from '../Title'
 
 function Section(props) {
     return (
-      <View style={Styles.container}> 
-        <Title title={props.title}/>
+      <View style={Styles.container} {...props}> 
+        <Title title={props.title} />
         {props.children}
       </View>
     );

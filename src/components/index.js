@@ -5,6 +5,8 @@ import HeaderSimple from './Header'
 import ProfileItemSection from './ProfileSection'
 import Section from './Section'
 import Title from './Title'
+import Divider from './Divider'
+import ItemSection from './Section/itemSection'
 
 export {
     Filters,
@@ -13,4 +15,6 @@ export {
     HeaderSimple,
     ProfileItemSection,
     Section,
-    Title}
+    Title,
+    Divider,
+    ItemSection}

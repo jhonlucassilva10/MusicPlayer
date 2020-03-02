@@ -7,12 +7,14 @@
 */
 
 import React from 'react'
-import {View,Text} from 'react-native'
+import {View,ScrollView,SafeAreaView} from 'react-native'
 import Styles from './styles'
 import {
     HeaderSimple,
     ProfileItemSection,
-    Section
+    Section,
+    Divider,
+    ItemSection
 } from '../../components';
 
 class Profile extends React.Component {
@@ -23,15 +25,29 @@ class Profile extends React.Component {
     
     render() {
       return (
-        <View style={Styles.container}>
-          <HeaderSimple title="Account settings"/>
-          <ProfileItemSection/>
-          <Section>
-            <Text color='red'>TESTE</Text>
-          </Section>
-        </View>
+        <SafeAreaView style={Styles.container}>
+          <ScrollView>
+            <View >
+              <HeaderSimple title="Account settings"/>
+              <ProfileItemSection/>
+              <ItemSection margin title={'Offline Mode'} description={'Only downloaded content will be available'}/>
+              <Divider/>
+              <Section title={'Playback'}>
+                <ItemSection title={'Crossfade'} description={''}/>
+                <ItemSection title={'Lourdness normalization'} />
+                <ItemSection title={'Autoplay'} description={'Play no-stop music.When you are finished with your last track, we will start a track radio based on the last track you played'}/>
+              </Section>
+              <Divider/>
+              <Section title={'Quality'}>
+                <ItemSection title={'Streaming'} description={''}/>
+                <ItemSection title={'Streaming'} description={''}/>
+              </Section>
+            </View>
+          </ScrollView>
+        </SafeAreaView>
       )
     }
   }
   
   export default Profile;
+

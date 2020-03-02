@@ -8,8 +8,7 @@ const fonts = {
     h3: dpiFont(18),
     h4: dpiFont(16),
     h5: dpiFont(14),
-    h6: dpiFont(11),
-    h7: dpiFont(10),
+    h6: dpiFont(12),
   };
   
   export default fonts;

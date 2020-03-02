@@ -58,7 +58,7 @@ class CardList extends React.Component {
    
     return (
       <SafeAreaView style={Style.container}>
-        <Title title={'Playlists'}/>
+        <Title title={'Playlists'} margin/>
         <FlatList
           contentContainerStyle={Style.contentContainerStyle} 
           data={DATA}

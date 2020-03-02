@@ -1,6 +1,6 @@
 
 import {fonts} from '../../styles'
-import {percentWidthDpi,pxSize,marginLeft} from '../../styles/metrics'
+import {percentWidthDpi,pxSize,margin} from '../../styles/metrics'
 
 
 const styles = {
@@ -9,15 +9,16 @@ const styles = {
         width:'100%',
         marginTop:percentWidthDpi(6),
         paddingBottom:percentWidthDpi(35),
-        paddingLeft:marginLeft,
+        marginLeft:margin,
         alignItems:'center',
         justifyContent:'center',
     },
     //List
     contentContainerStyle:{
         flexDirection:"row",
-         flexWrap:"wrap",
-         paddingTop:percentWidthDpi(1.5)
+        flexWrap:"wrap",
+        paddingTop:percentWidthDpi(1.5),
+        marginLeft:margin*0.2,
     },
 
     //Item
@@ -30,7 +31,7 @@ const styles = {
         alignItems:'center',
     },
     itemTitle: {
-        fontSize:fonts.h4,
+        fontSize:fonts.h5,
         color:'white',
         textAlign:'left',
         marginTop:'3.5%'

@@ -1,6 +1,6 @@
 
 import {fonts,colors} from '../../styles'
-import {percentWidthDpi,marginLeft,pxSize, dpiFont} from '../../styles/metrics'
+import {percentWidthDpi,margin,pxSize, dpiFont} from '../../styles/metrics'
 
 const styles = {
  
@@ -9,49 +9,56 @@ const styles = {
         height:percentWidthDpi(17),
         justifyContent:'flex-start',
         flexDirection:'row',
-        paddingLeft:marginLeft,
+        paddingLeft:margin,
         marginBottom:percentWidthDpi(2)
     },
     title:{
         fontSize:fonts.h3,
         color:'white'
     },
+    subtitle:{
+        fontSize:fonts.h6,
+        color:'grey'
+     },
     leftContainerProfileItem:{
-        width:'20%',
+        width:'80%',
         height:'100%',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        flexDirection:'row'
     },
     rightContainerProfileItem:{
-        width:'80%',
+        width:'20%',
         flexDirection:'row',
         alignItems:'center',
-        justifyContent:'space-between'
+        justifyContent:'flex-end',
+        paddingRight:margin
     },
     profileDescriptionContainer:{
-        width:'80%',
-        height:'100%',
-        paddingLeft:pxSize(10),
-        padding:pxSize(7),
-        justifyContent:'space-around'
+        flex:1,
+        height:'70%',
+        justifyContent:'space-around',
+    },
+    avatar:{
+        width:percentWidthDpi(15),
+        height:percentWidthDpi(15),
+        justifyContent:'center',
+        alignItems:'center',
+        marginRight:'5%'
     },
     linearGradient: {
         borderRadius:pxSize(50),
         position:'absolute',
-        height:percentWidthDpi(15),
-        width:percentWidthDpi(15)
+        height:'100%',
+        width:'100%',
     },
-    subtitle:{
-        fontSize:fonts.h5,
-        color:'grey'
-     },
     iconContainer:{
-        width:'20%',
+        width:percentWidthDpi(4),
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
     },
     icon:{
-        fontSize:dpiFont(26),
+        fontSize:dpiFont(22),
         color:'white'
     },
     gradiente:[colors.gradient.first,colors.gradient.second]
