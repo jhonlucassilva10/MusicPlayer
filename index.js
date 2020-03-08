@@ -2,8 +2,25 @@
  * @format
  */
 
+import React from 'react';
 import {AppRegistry} from 'react-native';
-import Navigator from './src/navigation'
+
+import { Provider } from 'react-redux';
+import { appReduxStore } from './src/redux/store';
+
+import {default as AppNavigationContainer }  from './src/navigation'
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => Navigator);
+
+
+function App(){
+      return (
+        <Provider store={appReduxStore}>
+            <AppNavigationContainer />
+        </Provider>
+      );
+  }
+
+
+
+AppRegistry.registerComponent(appName, () => App);

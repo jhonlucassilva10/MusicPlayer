@@ -1,0 +1,3 @@
+import UserSignInGoogleConnected from './userSignInGoogleConnected'
+
+export default UserSignInGoogleConnected

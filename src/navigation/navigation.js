@@ -1,12 +1,3 @@
-/* 
-  * Name: {Navigation}
-  * Author: {Jhon Lucas}
-  * Creation Date: (29/02/2019)
-  * Version: {1.0.0}
-  * @patch-notes - (Change Log)
-  
-*/
-
  import * as React from 'react';
  import {StatusBar} from 'react-native'
  import { NavigationContainer} from '@react-navigation/native';
@@ -24,7 +15,7 @@ const Stack = createStackNavigator();
     <NavigationContainer>
       <StatusBar barStyle="ligh-content" backgroundColor="transparent" translucent={true} />
       <Stack.Navigator 
-        initialRouteName="Login"
+        initialRouteName="SignIn"
         headerMode="screen" 
         screenOptions={{
         headerTitleAlign:'center',
@@ -40,7 +31,7 @@ const Stack = createStackNavigator();
           headerShown:false,  
           headerTransparent:true
         }}/>
-        <Stack.Screen name="Login" component={Login}  options={{
+        <Stack.Screen name="SignIn" component={Login}  options={{
           headerShown:false,  
           headerTransparent:true
         }}/>

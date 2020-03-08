@@ -1,14 +1,15 @@
-
 import React from 'react'
-import { SafeAreaView,
-     FlatList, 
-     View
-      } from 'react-native';
-
+import { 
+  SafeAreaView,
+  FlatList, 
+  View
+} from 'react-native';
 import Item from './filterItem'
 import Style from './styles'
+import { PropTypes } from 'prop-types';
 
-const DATA = [
+//created object containing title and value boolean just to feed the list during the test
+const Data = [
     {
       id: '1',
       title: 'Playlists',
@@ -52,6 +53,11 @@ class Filters extends React.Component {
     })
   }
 
+
+ /**The item separator has been inserted in place of the header item, 
+  * to improve the alignment of the items listed in the filter
+  * @name ListHeaderComponent  
+ */ 
   ListHeaderComponent() {
       return(<View style={Style.ItemSeparatorComponent}/>)
   }
@@ -61,7 +67,7 @@ class Filters extends React.Component {
     return (
       <SafeAreaView style={Style.filtercontainer}>
         <FlatList
-          data={DATA}
+          data={Data}
           renderItem={({ item }) => <Item title={item.title} onSelect={item.onSelect}/>}
           keyExtractor={item => item.id}
           horizontal={true}
@@ -72,5 +78,9 @@ class Filters extends React.Component {
     );
   }
 }
+
+Filters.propTypes = {
+  Data: PropTypes.object.isRequired,
+};
 
 export default Filters

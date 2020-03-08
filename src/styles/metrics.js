@@ -1,11 +1,3 @@
-/* 
-  * Name: {metrics}
-  * Author: {Jhon Lucas}
-  * Creation Date: (29/02/2019)
-  * Version: {1.0.0}
-  * @patch-notes - (Change Log)
-  
-*/
 import { Dimensions, PixelRatio } from 'react-native'
 
 let screenWidth = Dimensions.get('window').width

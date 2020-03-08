@@ -1,11 +1,3 @@
-/* 
-  * Name: {Home}
-  * Author: {Jhon Lucas}
-  * Creation Date: (01/03/2019)
-  * Version: {1.0.0}
-  * @patch-notes - (Change Log) 
-*/
-
 import React from 'react'
 import {View,Text} from 'react-native'
 import Styles from './styles'

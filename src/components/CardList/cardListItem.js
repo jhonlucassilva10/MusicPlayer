@@ -1,9 +1,15 @@
-
 import React,{useState} from 'react'
 import {Text,View,Image,ActivityIndicator} from 'react-native';
 import Styles from './styles'
 import {colors} from '../../styles'
 import TouchableScale from 'react-native-touchable-scale';
+import { PropTypes } from 'prop-types';
+
+/** 
+* @name Item
+* @param {string} image - Address of the image to be displayed in the item
+* @param {string} title - Title to be displayed in the item
+*/
 
 function Item(props) {
 
@@ -31,5 +37,10 @@ function Item(props) {
       
     );
   }
+
+Item.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
 export default Item

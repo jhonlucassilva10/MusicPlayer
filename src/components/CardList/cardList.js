@@ -1,16 +1,16 @@
-
 import React from 'react'
-import { SafeAreaView,
-     FlatList
-      } from 'react-native';
-
+import { 
+  SafeAreaView,
+  FlatList
+  } from 'react-native';
 import Title from '../Title'
 import Item from './cardListItem'
 import HeaderItem from './ListHeaderComponent'
 import Style from './styles'
+import { PropTypes } from 'prop-types';
 
-
-const DATA = [
+//created object containing title and image just to feed the list during the test
+const Data = [
     {
       id: '1',
       title: 'Back to the 90s',
@@ -61,7 +61,7 @@ class CardList extends React.Component {
         <Title title={'Playlists'} margin/>
         <FlatList
           contentContainerStyle={Style.contentContainerStyle} 
-          data={DATA}
+          data={Data}
           renderItem={({ item }) => <Item title={item.title} image={item.image}/>}
           keyExtractor={item => item.id}
           ListHeaderComponent={HeaderItem}
@@ -70,5 +70,11 @@ class CardList extends React.Component {
     );
   }
 }
+
+
+CardList.propTypes = {
+  listFilter: PropTypes.object.isRequired,
+  Data: PropTypes.object.isRequired,
+};
 
 export default CardList

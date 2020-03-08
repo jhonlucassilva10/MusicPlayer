@@ -1,11 +1,3 @@
-/* 
-  * Name: {Profile}
-  * Author: {Jhon Lucas}
-  * Creation Date: (01/03/2019)
-  * Version: {1.0.0}
-  * @patch-notes - (Change Log) 
-*/
-
 import React from 'react'
 import {View,ScrollView,SafeAreaView} from 'react-native'
 import Styles from './styles'
@@ -14,22 +6,9 @@ import {
     ProfileItemSection,
     Section,
     Divider,
-    ItemSection
+    ItemSection,
+    UserSignOut
 } from '../../components';
-
-import { GoogleSignin} from '@react-native-community/google-signin';
-
-
-signOut = async () => {
-  try {
-    await GoogleSignin.revokeAccess();
-    await GoogleSignin.signOut();
-    //this.setState({ user: null }); // Remember to remove the user from your app's state as well
-  } catch (error) {
-    console.error(error);
-  }
-};
-
 
 class Profile extends React.Component {
     constructor() {
@@ -44,7 +23,7 @@ class Profile extends React.Component {
             <View >
               <HeaderSimple title="Account settings"/>
               <ProfileItemSection/>
-              <ItemSection margin title={'Sign out'} onPress={signOut} description={'just click here if you want to sign out'}/>
+              <ItemSection margin title={'OfflineMode'} description={'Only download content will be available'}/>
               <Divider/>
               <Section title={'Playback'}>
                 <ItemSection title={'Crossfade'}/>
@@ -52,9 +31,7 @@ class Profile extends React.Component {
                 <ItemSection title={'Autoplay'} description={'Play no-stop music.When you are finished with your last track, we will start a track radio based on the last track you played'}/>
               </Section>
               <Divider/>
-              <Section title={'Quality'}>
-                <ItemSection title={'Streaming'} />
-              </Section>
+              <UserSignOut navigation={this.props.navigation}/>
             </View>
           </ScrollView>
         </SafeAreaView>

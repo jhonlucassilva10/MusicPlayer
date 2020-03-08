@@ -10,6 +10,10 @@ class SearchBarCompment extends React.Component {
     search: '',
   };
 
+  /**
+  * @name updateSearch  
+  * @param {string} search - text to be searched
+  */
   updateSearch = search => {
     this.setState({ search });
   };

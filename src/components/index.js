@@ -1,20 +1,27 @@
-import Filters from './Filters'
-import SearchBar from './SearchBar'
+import {default as Avatar} from './Avatar/avatarConnected'
 import CardList from './CardList'
+import Divider from './Divider'
+import Filters from './Filters'
 import HeaderSimple from './Header'
-import ProfileItemSection from './ProfileSection'
+import ItemSection from './Section/itemSection'
+import {default as  ProfileItemSection} from './ProfileSection/profileSectionConnected'
+import SearchBar from './SearchBar'
 import Section from './Section'
 import Title from './Title'
-import Divider from './Divider'
-import ItemSection from './Section/itemSection'
+import UserSignIn from './UserSignInGoogle'
+import UserSignOut from './UserSignOut'
 
 export {
-    Filters,
-    SearchBar,
+    Avatar,
     CardList,
+    Divider,
+    Filters,
     HeaderSimple,
+    ItemSection,
     ProfileItemSection,
+    SearchBar,
     Section,
     Title,
-    Divider,
-    ItemSection}
+    UserSignIn,
+    UserSignOut
+    }

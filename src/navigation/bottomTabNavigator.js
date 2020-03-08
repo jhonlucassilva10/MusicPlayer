@@ -1,12 +1,3 @@
-/* 
-  * Name: {bottomTabNavigator}
-  * Author: {Jhon Lucas}
-  * Creation Date: (29/02/2019)
-  * Version: {1.0.0}
-  * @patch-notes - (Change Log)
-  
-*/
-
  import * as React from 'react';
  import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
  //Icon Fonts

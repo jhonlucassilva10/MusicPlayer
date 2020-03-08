@@ -1,22 +1,17 @@
-
 import React from 'react'
 import {Text,View,TouchableOpacity} from 'react-native';
 import Styles from './styles'
-import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Avatar from '../Avatar/avatarConnected'
+import { PropTypes } from 'prop-types';
 
-function Avatar(){
-    return  <View style={Styles.avatar}>
-                <LinearGradient start={{x: 0.0, y: 1}} end={{x:0.8, y:0.5}} 
-                colors={Styles.gradiente} style={Styles.linearGradient}/>
-                <Text style={Styles.title}>
-                    UN
-                </Text>
-            </View> 
-}
 
-//profile component still under construction
-function ProfileItemSection() {
+/**
+  * @name ProfileItemSection  
+  * @param {object} googleUser - object with user data such as email, photos and name
+ */
+
+function ProfileItemSection(props) {
     return (
         <TouchableOpacity activeOpacity={0.8}
         style={Styles.profileItemSectionContainer}> 
@@ -24,10 +19,10 @@ function ProfileItemSection() {
                 <Avatar/> 
                 <View style={Styles.profileDescriptionContainer}>
                     <Text style={Styles.title}>
-                        User Name
+                        {props.googleUser.name || "No user logged in"}
                     </Text>  
                     <Text style={Styles.subtitle}>
-                        Premium member
+                        {props.googleUser.email||"login to see your email address"}
                     </Text>  
                 </View> 
             </View>         
@@ -40,5 +35,9 @@ function ProfileItemSection() {
       
     );
   }
+
+ProfileItemSection.propTypes = {
+    googleUser: PropTypes.object.isRequired,
+};
 
 export default ProfileItemSection
