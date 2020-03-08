@@ -57,3 +57,7 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+
+#Secret Keys
+/android/app/google-services.json

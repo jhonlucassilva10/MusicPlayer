@@ -1,15 +1,14 @@
 /* 
-  * Name: {Profile-Styles}
+  * Name: {login-Styles}
   * Author: {Jhon Lucas}
-  * Creation Date: (01/03/2019)
+  * Creation Date: (07/03/2019)
   * Version: {1.0.0}
   * @patch-notes - (Change Log) 
 */
 import {generals} from '../../styles'
 
 const Styles = {
-    container:generals.container,
-  
+    container:generals.container
 }
 
 export default Styles

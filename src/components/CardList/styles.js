@@ -46,7 +46,26 @@ const styles = {
         width:'100%',
         height:'100%',
         borderRadius:pxSize(8)
+    },
+    borderDashedLine:{
+        width:'100%', 
+        height:'100%',
+        borderRadius:10,
+        backgroundColor:'#131415',
+        justifyContent:'center',
+        alignItems:'center',
+        borderWidth:2,
+        borderColor:'grey',
+        borderStyle:'dashed', 
+        zIndex: 0
+    },
+    borderNormalLine:{
+        backgroundColor:'#131415',
+        justifyContent:'center',
+        borderWidth:2,
+        borderColor:'grey',
     }
+
 }
 
 export default styles

@@ -7,9 +7,7 @@ function ListHeaderComponent({ title }) {
     return (
       <TouchableOpacity activeOpacity={0.7} style={[Styles.itemContainer]}>
       <View style={{width:'100%',height:'80%'}}>
-          <View style={{ width:'100%', height:'100%',borderRadius:10,backgroundColor:'#131415',
-          justifyContent:'center',alignItems:'center',
-          borderWidth:2,borderColor:'grey',borderStyle: 'dashed', zIndex: 0}}>
+          <View style={Styles.borderDashedLine}>
             <Text style={{fontSize:25,color:'white'}}>
                 +
             </Text> 

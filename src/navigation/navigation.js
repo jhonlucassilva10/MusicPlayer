@@ -15,6 +15,7 @@
 
 //Screens
 import BottomTabNavigator from './bottomTabNavigator';
+import {Login} from '../screens'
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const Stack = createStackNavigator();
     <NavigationContainer>
       <StatusBar barStyle="ligh-content" backgroundColor="transparent" translucent={true} />
       <Stack.Navigator 
+        initialRouteName="Login"
         headerMode="screen" 
         screenOptions={{
         headerTitleAlign:'center',
@@ -35,6 +37,10 @@ const Stack = createStackNavigator();
         ...TransitionPresets.SlideFromRightIOS,
       }}>
         <Stack.Screen name="Home" component={BottomTabNavigator}  options={{
+          headerShown:false,  
+          headerTransparent:true
+        }}/>
+        <Stack.Screen name="Login" component={Login}  options={{
           headerShown:false,  
           headerTransparent:true
         }}/>

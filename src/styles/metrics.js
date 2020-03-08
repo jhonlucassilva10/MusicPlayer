@@ -27,7 +27,7 @@ const dpiFont = fontSize => {
     return PixelRatio.getFontScale() * fontSize
 }
 
-const margin=percentWidthDpi(7);
+const margin=percentWidthDpi(5);
 const marginHeaderTop=percentWidthDpi(9)
 
 export { 

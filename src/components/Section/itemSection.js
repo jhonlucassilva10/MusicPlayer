@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 function ItemSection(props) {
     return (
-        <TouchableOpacity activeOpacity={0.7} style={[Styles.itemSectionContainer,props.margin?Styles.margin:null]}> 
+        <TouchableOpacity activeOpacity={0.7} onPress={props.onPress} style={[Styles.itemSectionContainer,props.margin?Styles.margin:null]}> 
             <View style={[Styles.upContainer]}>  
                 <Text style={Styles.title}>{props.title}</Text>
                 <View style={Styles.iconContainer}>

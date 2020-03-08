@@ -17,20 +17,34 @@ import {
     ItemSection
 } from '../../components';
 
+import { GoogleSignin} from '@react-native-community/google-signin';
+
+
+signOut = async () => {
+  try {
+    await GoogleSignin.revokeAccess();
+    await GoogleSignin.signOut();
+    //this.setState({ user: null }); // Remember to remove the user from your app's state as well
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+
 class Profile extends React.Component {
     constructor() {
       super();
       this.state = {}
     }
-    
+  
     render() {
       return (
         <SafeAreaView style={Styles.container}>
-          <ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false}>
             <View >
               <HeaderSimple title="Account settings"/>
               <ProfileItemSection/>
-              <ItemSection margin title={'Offline Mode'} description={'Only downloaded content will be available'}/>
+              <ItemSection margin title={'Sign out'} onPress={signOut} description={'just click here if you want to sign out'}/>
               <Divider/>
               <Section title={'Playback'}>
                 <ItemSection title={'Crossfade'}/>
@@ -39,7 +53,6 @@ class Profile extends React.Component {
               </Section>
               <Divider/>
               <Section title={'Quality'}>
-                <ItemSection title={'Streaming'} />
                 <ItemSection title={'Streaming'} />
               </Section>
             </View>

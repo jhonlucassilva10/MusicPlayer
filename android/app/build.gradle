@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
 
 import com.android.build.OutputFile
 
@@ -128,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.musicplayer"
+        applicationId "com.musicplayerdemo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -179,6 +180,7 @@ android {
 }
 
 dependencies {
+    implementation project(':@react-native-community_google-signin')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
